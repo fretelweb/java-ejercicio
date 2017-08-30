@@ -10,45 +10,45 @@ import com.ejercicio.negocio.PersonaNegocio;
 public class Main {
 
 	private static String MostrarMenuPrincipal() {
-
+		System.out.println("--------------------------");
 		System.out.println("[P] Gestor de Personas");
 		System.out.println("[O] Gestor de Organizacion");
 		System.out.println("[N] Gestor de Negocio");
 		System.out.println("[A] Gestor de Actividades");
 		System.out.println("[E] Salir de la aplicacion");
 
-		System.out.println("Ingrese la opcion: ");
+		System.out.print("Ingrese la opcion: ");
 		Scanner sc = new Scanner(System.in);
-		return sc.nextLine().toLowerCase();
+		return sc.nextLine().toUpperCase();
 	}
 
 	public static void main(String[] args) {
 
-		// PersonaNegocio p = new PersonaNegocio();
-		//
-		// p.Mostrar();
-
 		String opcion = "";
 
-		while (!"e".equals(opcion)) {
+		while (!"E".equals(opcion)) {
+			
 			opcion = MostrarMenuPrincipal();
-			System.out.println("Usted escogio: " + opcion);
-			if (!"e".equals(opcion.toLowerCase())) {
+			
+			if (!"E".equals(opcion.toLowerCase())) {
 				INegocio negocio = null;
 				switch (opcion) {
-				case "p":
+				case "P":
 					negocio = new PersonaNegocio();
 					break;
-				case "a":
+				case "A":
 					break;
-				case "o":
+				case "O":
 					break;
-				case "n":
+				case "N":
 					break;
 				default:
-					negocio = new PersonaNegocio();
+					continue;
+					
 				}
+				
 				negocio.Start();
+				
 			}
 		}
 

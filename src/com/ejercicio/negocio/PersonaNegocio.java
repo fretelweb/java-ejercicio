@@ -1,5 +1,7 @@
 package com.ejercicio.negocio;
 
+import java.util.Scanner;
+
 import com.ejercicio.interfaces.INegocio;
 import com.ejercicio.listas.Lista;
 import com.ejercicio.modelos.Persona;
@@ -32,7 +34,22 @@ public class PersonaNegocio implements INegocio {
 
 	@Override
 	public void Start() {
+		System.out.println("--------------------------------");
 		System.out.println("Usted ingreso al modulo Personas");
+		System.out.println("--------------------------------");
+		String opcion = "";
+		while(!"E".equals(opcion)) {
+			opcion = MostrarMenu();
+		}
+	}
+	
+	private String MostrarMenu() {
+		System.out.println("------------------");
+		System.out.print("Ingrese una opcion: ");
+		Scanner sc = new Scanner(System.in);
+		System.out.println("------------------");
+		return sc.nextLine().toUpperCase();
+		
 	}
 
 }
