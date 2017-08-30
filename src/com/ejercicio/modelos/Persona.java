@@ -1,25 +1,15 @@
 package com.ejercicio.modelos;
 
 public class Persona {
-	Integer Id;
-	String Nombre;
-	String Apellidos;
-	String Documento;
-	
-	
 
-	public Persona(String nombre, String apellidos, String documento) {
+	private String Nombre;
+	private String Telefono;
+	private String Correo;
+
+	public Persona(String nombre, String telefono, String correo) {
 		Nombre = nombre;
-		Apellidos = apellidos;
-		Documento = documento;
-	}
-
-	public Integer getId() {
-		return Id;
-	}
-
-	public void setId(Integer id) {
-		Id = id;
+		Telefono = telefono;
+		Correo = correo;
 	}
 
 	public String getNombre() {
@@ -30,19 +20,27 @@ public class Persona {
 		Nombre = nombre;
 	}
 
-	public String getApellidos() {
-		return Apellidos;
+	public String getTelefono() {
+		return Telefono;
 	}
 
-	public void setApellidos(String apellidos) {
-		Apellidos = apellidos;
+	public void setTelefono(String telefono) {
+		Telefono = telefono;
 	}
 
-	public String getDocumento() {
-		return Documento;
+	public String getCorreo() {
+		return Correo;
 	}
 
-	public void setDocumento(String documento) {
-		Documento = documento;
+	public void setCorreo(String correo) {
+		Correo = correo;
 	}
+
+	@Override
+	public String toString() {
+		return "Nombre: " + this.Nombre + "\nTelefono: " + this.Telefono + "\nCorreo: " + this.Correo;
+	}
+
+	
+	
 }

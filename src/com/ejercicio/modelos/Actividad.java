@@ -2,17 +2,32 @@ package com.ejercicio.modelos;
 
 public class Actividad {
 
-	Integer Id;
-	String Tipo;
-	String Actividad;
-	Integer EntidadId;
+	private String Descripcion;
+	private String Tipo;
+	private String Hora;
+	private String Duracion;
+	private String NombrePersona;
+	private String NombreOrganizacion;
+	private String NombreNegocio;
 
-	public Integer getId() {
-		return Id;
+	public Actividad(String descripcion, String tipo, String hora, String duracion, String nombrePersona,
+			String nombreOrganizacion, String nombreNegocio) {
+		super();
+		Descripcion = descripcion;
+		Tipo = tipo;
+		Hora = hora;
+		Duracion = duracion;
+		NombrePersona = nombrePersona;
+		NombreOrganizacion = nombreOrganizacion;
+		NombreNegocio = nombreNegocio;
 	}
 
-	public void setId(Integer id) {
-		Id = id;
+	public String getDescripcion() {
+		return Descripcion;
+	}
+
+	public void setDescripcion(String descripcion) {
+		Descripcion = descripcion;
 	}
 
 	public String getTipo() {
@@ -23,20 +38,44 @@ public class Actividad {
 		Tipo = tipo;
 	}
 
-	public String getActividad() {
-		return Actividad;
+	public String getHora() {
+		return Hora;
 	}
 
-	public void setActividad(String actividad) {
-		Actividad = actividad;
+	public void setHora(String hora) {
+		Hora = hora;
 	}
 
-	public Integer getEntidadId() {
-		return EntidadId;
+	public String getDuracion() {
+		return Duracion;
 	}
 
-	public void setEntidadId(Integer entidadId) {
-		EntidadId = entidadId;
+	public void setDuracion(String duracion) {
+		Duracion = duracion;
+	}
+
+	public String getNombrePersona() {
+		return NombrePersona;
+	}
+
+	public void setNombrePersona(String nombrePersona) {
+		NombrePersona = nombrePersona;
+	}
+
+	public String getNombreOrganizacion() {
+		return NombreOrganizacion;
+	}
+
+	public void setNombreOrganizacion(String nombreOrganizacion) {
+		NombreOrganizacion = nombreOrganizacion;
+	}
+
+	public String getNombreNegocio() {
+		return NombreNegocio;
+	}
+
+	public void setNombreNegocio(String nombreNegocio) {
+		NombreNegocio = nombreNegocio;
 	}
 
 }

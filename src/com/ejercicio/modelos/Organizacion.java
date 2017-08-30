@@ -1,32 +1,24 @@
 package com.ejercicio.modelos;
 
 public class Organizacion {
-	Integer Id;
-	String Razon;
-	String Direccion;
-	String Ruc;
 
-	public Organizacion(String razon, String direccion, String ruc) {
+	private String Nombre;
+	private String Direccion;
+	private String Telefono;
+
+	public Organizacion(String nombre, String direccion, String telefono) {
 		super();
-		Razon = razon;
+		Nombre = nombre;
 		Direccion = direccion;
-		Ruc = ruc;
+		Telefono = telefono;
 	}
 
-	public Integer getId() {
-		return Id;
+	public String getNombre() {
+		return Nombre;
 	}
 
-	public void setId(Integer id) {
-		Id = id;
-	}
-
-	public String getRazon() {
-		return Razon;
-	}
-
-	public void setRazon(String razon) {
-		Razon = razon;
+	public void setNombre(String nombre) {
+		Nombre = nombre;
 	}
 
 	public String getDireccion() {
@@ -37,12 +29,12 @@ public class Organizacion {
 		Direccion = direccion;
 	}
 
-	public String getRuc() {
-		return Ruc;
+	public String getTelefono() {
+		return Telefono;
 	}
 
-	public void setRuc(String ruc) {
-		Ruc = ruc;
+	public void setTelefono(String telefono) {
+		Telefono = telefono;
 	}
 
 }
